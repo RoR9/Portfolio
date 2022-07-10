@@ -1,0 +1,364 @@
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --main-red:#be3144;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.4;
+  overflow-x: hidden;
+}
+
+/************* Nav Bar ***********/
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  background-color: var(--main-red);
+  max-height: 70px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.nav-bar-elements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-bar-elements-element {
+  margin: 10px;
+  list-style: none;
+}
+
+.nav-bar-elements-element-link {
+  display: block;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 1.15rem;
+  height: 100%;
+  color: white;
+}
+
+.nav-bar-elements-element-link:hover {
+  background-color: #45567d;
+}
+
+/************* Welcome Section ***********/
+.welcome_section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+
+.welcome_section-text, .welcome_section-title {
+  -webkit-transform: translate(0px, 120%);
+          transform: translate(0px, 120%);
+  opacity: 0;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+.welcome_section-text._active, .welcome_section-title._active {
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  opacity: 1;
+}
+
+.welcome_section-title {
+  font-size: 3rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+.welcome_section-text {
+  font-size: 1.5rem;
+  font-weight: 200;
+  font-style: italic;
+  color: var(--main-red);
+}
+
+/************* Welcome Section ***********/
+.projects {
+  background-color: #45567d;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.project-title {
+  max-width: 350px;
+  display: block;
+  text-align: center;
+  margin: 0 auto 3rem auto;
+  border-bottom: white solid 0.2rem;
+}
+
+.projects-columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.project-tile {
+  background-color: #303841;
+  text-decoration: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 5px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.project-tile:hover .code {
+  color: #ff7f50;
+}
+
+.project-tile:hover .ncode {
+  color: #ff7f50;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+  margin-right: -5px;
+}
+
+.project-tile .project-column-img {
+  width: 100%;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+.project-tile .project-columng {
+  display: block;
+  width: 350px;
+  height: 350px;
+}
+
+.project-tile .project-column-title {
+  padding: 15px;
+  text-align: center;
+  -webkit-transform: translate(0px, 50%);
+          transform: translate(0px, 50%);
+  opacity: 0;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.project-tile._active .project-column-img {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.project-tile._active .project-column-title {
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  opacity: 1;
+  -webkit-transition: all 0.8s ease 0.6s;
+  transition: all 0.8s ease 0.6s;
+}
+
+.code, .ncode {
+  display: inline-block;
+  height: 100%;
+  text-align: center;
+  color: #303841;
+  -webkit-transition: color 0.3s ease-out;
+  transition: color 0.3s ease-out;
+}
+
+.show-all-btn {
+  display: inline-block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1rem 1rem;
+  border-radius: 2px;
+  font-size: 1.4rem;
+  background: #303841;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.show-all-btn:hover {
+  background: var(--main-red);
+}
+
+.show-all-btn:hover .icon {
+  -webkit-transform: translate(2px, -1px);
+          transform: translate(2px, -1px);
+}
+
+.icon {
+  display: inline-block;
+  margin-left: 10px;
+  -webkit-transform: translate(0, -1px);
+          transform: translate(0, -1px);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+}
+
+/********Contact Section**********/
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #303841;
+  text-align: center;
+  width: 100%;
+  height: 80vh;
+  padding: 0 2rem;
+}
+
+.contact_title {
+  font-size: 4rem;
+  -webkit-transform: translate(0px, 120%);
+          transform: translate(0px, 120%);
+  opacity: 0;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+.contact_title._active {
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  opacity: 1;
+}
+
+.contact_description {
+  font-style: italic;
+  margin-bottom: 20px;
+  -webkit-transform: translate(0px, 120%);
+          transform: translate(0px, 120%);
+  opacity: 0;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+.contact_description._active {
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  opacity: 1;
+}
+
+.contact_links_columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translate(-120%, 0px);
+          transform: translate(-120%, 0px);
+  -webkit-transition: all 1.3s ease 0s;
+  transition: all 1.3s ease 0s;
+}
+
+.contact_links_columns._active {
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+}
+
+.contact_links_column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.contact_links_column:hover {
+  -webkit-transform: translateY(7px);
+          transform: translateY(7px);
+}
+
+.contact_link {
+  margin-left: 30px;
+  text-decoration: none;
+}
+
+.contact_link img {
+  margin-right: 5px;
+  height: 19px;
+  width: 23px;
+}
+
+/********Footer Section**********/
+.footer {
+  border-top: var(--main-red) solid 7px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #303841;
+  width: 100%;
+  height: 12vh;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 1.3rem;
+}
+
+.footer_description {
+  margin: 1rem 0;
+}
+
+.footer_copyright {
+  margin: 1rem 0;
+}
+/*# sourceMappingURL=style.css.map */

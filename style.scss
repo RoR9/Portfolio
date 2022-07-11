@@ -455,6 +455,21 @@ transform: translate(0px,0px);
     }
 }
 
+@media (max-width:450px){
+    .contact_links_columns{
+    flex-direction: column;
+    align-items: center;
+    
+    }
+    .contact_links_column{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+}
+
 /********Footer Section**********/
 .footer {
     border-top: var(--main-red) solid 7px;

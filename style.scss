@@ -438,6 +438,7 @@ transform: translate(0px,0px);
 .contact_links_column{
     
     display: flex;
+    align-items:flex-end;
     transition: transform 0.3s ease-out;
     transform: translateY(0);
     &:hover{
@@ -450,7 +451,7 @@ transform: translate(0px,0px);
 
     img{
         margin-right: 5px;
-        height: 19px;
+        height: 23px;
         width: 23px;
     }
 }

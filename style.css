@@ -562,6 +562,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -webkit-transition: -webkit-transform 0.3s ease-out;
   transition: -webkit-transform 0.3s ease-out;
   transition: transform 0.3s ease-out;
@@ -582,7 +585,7 @@ body {
 
 .contact_link img {
   margin-right: 5px;
-  height: 19px;
+  height: 23px;
   width: 23px;
 }
 
